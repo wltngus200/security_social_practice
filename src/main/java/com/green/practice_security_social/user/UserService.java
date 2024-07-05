@@ -1,6 +1,6 @@
 package com.green.practice_security_social.user;
 
-import com.green.securitypractice.user.model.*;
+import com.green.practice_security_social.user.model.*;
 import jakarta.servlet.http.HttpServletResponse;
 
 public interface UserService {

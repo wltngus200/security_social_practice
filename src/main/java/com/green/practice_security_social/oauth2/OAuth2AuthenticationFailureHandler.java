@@ -1,7 +1,7 @@
 package com.green.practice_security_social.oauth2;
-import com.green.securitypractice.AppProperties;
-import com.green.securitypractice.CookieUtils;
-import com.green.securitypractice.security.jwt.JwtTokenProviderV2;
+import com.green.practice_security_social.AppProperties;
+import com.green.practice_security_social.CookieUtils;
+import com.green.practice_security_social.jwt.JwtTokenProviderV2;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

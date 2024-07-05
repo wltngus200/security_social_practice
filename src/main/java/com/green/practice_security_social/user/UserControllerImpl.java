@@ -1,6 +1,6 @@
 package com.green.practice_security_social.user;
 
-import com.green.securitypractice.user.model.*;
+import com.green.practice_security_social.user.model.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ public class UserControllerImpl {
 
     @PostMapping("sign-up")
     public ResultDto<Integer> postUser(@RequestPart SignUpPostReq p){
-        int result=service.postUser( p);
+        int result=service.postUser(p);
         return ResultDto.<Integer>builder()
                 .statusCode(HttpStatus.OK)
                 .resultData(result)

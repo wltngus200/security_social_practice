@@ -1,12 +1,12 @@
 package com.green.practice_security_social.oauth2;
 
-import com.green.securitypractice.security.MyUserDetails;
-import com.green.securitypractice.security.MyUserOAuth2VO;
-import com.green.securitypractice.security.SignInProviderType;
-import com.green.securitypractice.user.UserMapper;
-import com.green.securitypractice.user.model.SignInPostReq;
-import com.green.securitypractice.user.model.SignUpPostReq;
-import com.green.securitypractice.user.model.User;
+import com.green.practice_security_social.MyUserDetails;
+import com.green.practice_security_social.MyUserOAuth2VO;
+import com.green.practice_security_social.SignInProviderType;
+import com.green.practice_security_social.user.UserMapper;
+import com.green.practice_security_social.user.model.SignInPostReq;
+import com.green.practice_security_social.user.model.SignUpPostReq;
+import com.green.practice_security_social.user.model.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;

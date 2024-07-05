@@ -1,9 +1,9 @@
 package com.green.practice_security_social.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.green.securitypractice.AppProperties;
-import com.green.securitypractice.security.MyUser;
-import com.green.securitypractice.security.MyUserDetails;
+import com.green.practice_security_social.AppProperties;
+import com.green.practice_security_social.MyUser;
+import com.green.practice_security_social.MyUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;

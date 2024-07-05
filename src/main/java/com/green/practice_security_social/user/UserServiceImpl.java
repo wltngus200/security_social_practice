@@ -1,11 +1,11 @@
 package com.green.practice_security_social.user;
 
-import com.green.securitypractice.AppProperties;
-import com.green.securitypractice.CookieUtils;
-import com.green.securitypractice.security.MyUser;
-import com.green.securitypractice.security.SignInProviderType;
-import com.green.securitypractice.security.jwt.JwtTokenProviderV2;
-import com.green.securitypractice.user.model.*;
+import com.green.practice_security_social.AppProperties;
+import com.green.practice_security_social.CookieUtils;
+import com.green.practice_security_social.MyUser;
+import com.green.practice_security_social.SignInProviderType;
+import com.green.practice_security_social.jwt.JwtTokenProviderV2;
+import com.green.practice_security_social.user.model.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService{
             throw new RuntimeException("(o゜▽゜)o☆ 비밀번호 틀렸쪄");
         }
 
-        MyUser myUser=MyUser.builder().userId(user.getUserId()).role("ROLE_USER").build();
+        MyUser myUser= MyUser.builder().userId(user.getUserId()).role("ROLE_USER").build();
 
         String accessToken= jwtTokenProvider.generateAccessToken(myUser);
         String refreshToken=jwtTokenProvider.generateRefreshToken(myUser);

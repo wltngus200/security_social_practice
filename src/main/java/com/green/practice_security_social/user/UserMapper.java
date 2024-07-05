@@ -1,6 +1,6 @@
 package com.green.practice_security_social.user;
 
-import com.green.securitypractice.user.model.*;
+import com.green.practice_security_social.user.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

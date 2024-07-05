@@ -1,12 +1,12 @@
 package com.green.practice_security_social;
 
-import com.green.securitypractice.security.jwt.JwtAuthenticationAccessDeniedHandler;
-import com.green.securitypractice.security.jwt.JwtAuthenticationEntryPoint;
-import com.green.securitypractice.security.jwt.JwtAuthenticationFilter;
-import com.green.securitypractice.security.oauth2.MyOAuth2UserService;
-import com.green.securitypractice.security.oauth2.OAuth2AuthenticationFailureHandler;
-import com.green.securitypractice.security.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository;
-import com.green.securitypractice.security.oauth2.OAuth2AuthenticationSuccessHandler;
+import com.green.practice_security_social.jwt.JwtAuthenticationAccessDeniedHandler;
+import com.green.practice_security_social.jwt.JwtAuthenticationEntryPoint;
+import com.green.practice_security_social.jwt.JwtAuthenticationFilter;
+import com.green.practice_security_social.oauth2.MyOAuth2UserService;
+import com.green.practice_security_social.oauth2.OAuth2AuthenticationFailureHandler;
+import com.green.practice_security_social.oauth2.OAuth2AuthenticationRequestBasedOnCookieRepository;
+import com.green.practice_security_social.oauth2.OAuth2AuthenticationSuccessHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

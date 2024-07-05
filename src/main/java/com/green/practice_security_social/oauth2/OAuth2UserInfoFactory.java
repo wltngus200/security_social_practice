@@ -1,6 +1,6 @@
 package com.green.practice_security_social.oauth2;
 
-import com.green.securitypractice.security.SignInProviderType;
+import com.green.practice_security_social.SignInProviderType;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
