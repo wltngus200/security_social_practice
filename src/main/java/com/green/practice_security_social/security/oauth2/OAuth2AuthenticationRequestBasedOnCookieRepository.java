@@ -1,8 +1,8 @@
-package com.green.practice_security_social.oauth2;
+package com.green.practice_security_social.security.oauth2;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.green.practice_security_social.AppProperties;
-import com.green.practice_security_social.CookieUtils;
+import com.green.practice_security_social.common.model.AppProperties;
+import com.green.practice_security_social.common.CookieUtils;
 import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

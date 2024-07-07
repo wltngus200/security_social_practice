@@ -1,4 +1,4 @@
-package com.green.practice_security_social;
+package com.green.practice_security_social.common;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +14,6 @@ import java.util.Base64;
 @Component
 @RequiredArgsConstructor
 public class CookieUtils {
-
     public Cookie getCookie(HttpServletRequest req, String name){
         Cookie[] cookies=req.getCookies();
         if(cookies!=null && cookies.length>0){

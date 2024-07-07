@@ -1,8 +1,8 @@
-package com.green.practice_security_social.oauth2;
+package com.green.practice_security_social.security.oauth2;
 
-import com.green.practice_security_social.MyUserDetails;
-import com.green.practice_security_social.MyUserOAuth2VO;
-import com.green.practice_security_social.SignInProviderType;
+import com.green.practice_security_social.security.MyUserDetails;
+import com.green.practice_security_social.security.MyUserOAuth2VO;
+import com.green.practice_security_social.security.SignInProviderType;
 import com.green.practice_security_social.user.UserMapper;
 import com.green.practice_security_social.user.model.SignInPostReq;
 import com.green.practice_security_social.user.model.SignUpPostReq;

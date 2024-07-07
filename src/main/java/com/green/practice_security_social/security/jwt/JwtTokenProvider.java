@@ -1,9 +1,9 @@
-package com.green.practice_security_social.jwt;
+package com.green.practice_security_social.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.green.practice_security_social.AppProperties;
-import com.green.practice_security_social.MyUser;
-import com.green.practice_security_social.MyUserDetails;
+import com.green.practice_security_social.common.model.AppProperties;
+import com.green.practice_security_social.security.MyUser;
+import com.green.practice_security_social.security.MyUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -20,20 +20,50 @@ import java.util.Date;
 
 @Slf4j
 @Component
-public class JwtTokenProviderV2 {
+public class JwtTokenProvider {
     private final ObjectMapper om;
     private final AppProperties appProperties;
     private final SecretKey secretKey;
 
-    public JwtTokenProviderV2(ObjectMapper om, AppProperties appProperties){
+    public JwtTokenProvider(ObjectMapper om, AppProperties appProperties){
         this.om=om;
         this.appProperties=appProperties;
         this.secretKey = Keys.hmacShaKeyFor(Decoders.BASE64URL.decode(appProperties.getJwt().getSecret()));
     }
 
+    // Filter에서 토큰 정보를 확인
+    public String resolveToken(HttpServletRequest req){
+        String jwt=req.getHeader(appProperties.getJwt().getHeaderSchemaName());
+        if (jwt==null){return null;}
+        if(!jwt.startsWith(appProperties.getJwt().getTokenType())){
+            return null;
+        }
+        return jwt.substring(appProperties.getJwt().getTokenType().length()).trim();
+    }
+
+    public boolean isValidateToken(String token){
+        try{
+            return !getAllClaims(token).getExpiration().before(new Date());
+
+        }catch(Exception e){
+            return false;
+        }
+    }
+
+    // 토큰의 만료 시간 혹은 유저 정보
+    public Claims getAllClaims(String token){
+        return Jwts
+                .parser()
+                .verifyWith(secretKey)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+    }
+
+
+    // 없으면 만든다
     public String generateAccessToken(MyUser myUser){
         return generateToken(myUser, appProperties.getJwt().getRefreshTokenExpiry());
-
     }
 
     public String generateRefreshToken(MyUser myUser) {
@@ -59,14 +89,7 @@ public class JwtTokenProviderV2 {
         return null;
     }
 
-    public Claims getAllClaims(String token){
-        return Jwts
-                .parser()
-                .verifyWith(secretKey)
-                .build()
-                .parseSignedClaims(token)
-                .getPayload();
-    }
+
 
     private UserDetails getUserDetailsFromToken(String token){
         try{
@@ -92,21 +115,4 @@ public class JwtTokenProviderV2 {
 
     }
 
-    public boolean isValidateToken(String token){
-        try{
-            return !getAllClaims(token).getExpiration().before(new Date());
-
-        }catch(Exception e){
-            return false;
-        }
-    }
-
-    public String resolveToken(HttpServletRequest req){
-        String jwt=req.getHeader(appProperties.getJwt().getHeaderSchemaName());
-        if (jwt==null){return null;}
-        if(!jwt.startsWith(appProperties.getJwt().getTokenType())){
-            return null;
-        }
-        return jwt.substring(appProperties.getJwt().getTokenType().length()).trim();
-    }
 }

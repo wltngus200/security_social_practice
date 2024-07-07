@@ -39,7 +39,11 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    implementation 'io.jsonwebtoken:jjwt-api:0.12.5' //Keys, Claims
+    //Keys, Claims
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-gson:0.12.5'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0' //Swagger
     implementation 'me.paulschwarz:spring-dotenv:4.0.0' //env값을 받아오기 위함
 }

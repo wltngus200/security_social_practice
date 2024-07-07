@@ -1,4 +1,4 @@
-package com.green.practice_security_social.oauth2;
+package com.green.practice_security_social.security.oauth2;
 
 import java.util.Map;
 public class GoogleOAuth2UserInfo extends OAuth2UserInfo{

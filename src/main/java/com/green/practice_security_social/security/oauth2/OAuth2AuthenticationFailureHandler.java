@@ -1,7 +1,7 @@
-package com.green.practice_security_social.oauth2;
-import com.green.practice_security_social.AppProperties;
-import com.green.practice_security_social.CookieUtils;
-import com.green.practice_security_social.jwt.JwtTokenProviderV2;
+package com.green.practice_security_social.security.oauth2;
+import com.green.practice_security_social.common.model.AppProperties;
+import com.green.practice_security_social.common.CookieUtils;
+import com.green.practice_security_social.security.jwt.JwtTokenProvider;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ public class OAuth2AuthenticationFailureHandler extends SimpleUrlAuthenticationF
     private final OAuth2AuthenticationRequestBasedOnCookieRepository repository;
     private final CookieUtils cookieUtils;
     private final AppProperties appProperties;
-    private final JwtTokenProviderV2 jwtTokenProvider;
+    private final JwtTokenProvider jwtTokenProvider;
 
     //@Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response){

@@ -1,4 +1,4 @@
-package com.green.practice_security_social;
+package com.green.practice_security_social.common.model;
 
 import lombok.Getter;
 import lombok.Setter;

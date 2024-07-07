@@ -1,7 +1,11 @@
-package com.green.practice_security_social.oauth2;
+package com.green.practice_security_social.security.oauth2;
 
-import com.green.practice_security_social.*;
-import com.green.practice_security_social.jwt.JwtTokenProviderV2;
+import com.green.practice_security_social.common.CookieUtils;
+import com.green.practice_security_social.common.model.AppProperties;
+import com.green.practice_security_social.security.MyUser;
+import com.green.practice_security_social.security.MyUserDetails;
+import com.green.practice_security_social.security.MyUserOAuth2VO;
+import com.green.practice_security_social.security.jwt.JwtTokenProvider;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -22,7 +26,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
     private final OAuth2AuthenticationRequestBasedOnCookieRepository repository;
     private final AppProperties appProperties;
     private final CookieUtils cookieUtils;
-    private final JwtTokenProviderV2 jwtTokenProvider;
+    private final JwtTokenProvider jwtTokenProvider;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,

@@ -1,4 +1,4 @@
-package com.green.practice_security_social;
+package com.green.practice_security_social.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;

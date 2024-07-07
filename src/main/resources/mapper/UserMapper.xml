@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.com.green.practice_security_social.user.UserMapper">
+    <insert id="postUser">
+
+    </insert>
+
+
+    <select id="getUserId">
+
+    </select>
+
+
+    <update id="selProfileUserInfo">
+
+    </update>
+
+
+    <select id="selTest">
+
+    </select>
+</mapper>

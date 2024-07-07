@@ -1,7 +1,7 @@
 package com.green.practice_security_social.user.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.green.practice_security_social.SignInProviderType;
+import com.green.practice_security_social.security.SignInProviderType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;

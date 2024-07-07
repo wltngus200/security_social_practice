@@ -1,4 +1,4 @@
-package com.green.practice_security_social.oauth2;
+package com.green.practice_security_social.security.oauth2;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

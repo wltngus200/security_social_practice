@@ -1,4 +1,4 @@
-package com.green.practice_security_social.jwt;
+package com.green.practice_security_social.security.jwt;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

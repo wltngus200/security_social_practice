@@ -1,10 +1,10 @@
 package com.green.practice_security_social.user;
 
-import com.green.practice_security_social.AppProperties;
-import com.green.practice_security_social.CookieUtils;
-import com.green.practice_security_social.MyUser;
-import com.green.practice_security_social.SignInProviderType;
-import com.green.practice_security_social.jwt.JwtTokenProviderV2;
+import com.green.practice_security_social.common.model.AppProperties;
+import com.green.practice_security_social.common.CookieUtils;
+import com.green.practice_security_social.security.MyUser;
+import com.green.practice_security_social.security.SignInProviderType;
+import com.green.practice_security_social.security.jwt.JwtTokenProvider;
 import com.green.practice_security_social.user.model.*;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +22,7 @@ import java.util.Map;
 public class UserServiceImpl implements UserService{
     private final UserMapper mapper;
     private final PasswordEncoder passwordEncoder;
-    private final JwtTokenProviderV2 jwtTokenProvider;
+    private final JwtTokenProvider jwtTokenProvider;
     private final CookieUtils cookieUtils;
     private final AppProperties appProperties;
 
