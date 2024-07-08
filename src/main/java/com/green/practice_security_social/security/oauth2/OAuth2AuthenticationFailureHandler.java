@@ -22,7 +22,5 @@ public class OAuth2AuthenticationFailureHandler extends SimpleUrlAuthenticationF
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response){
         log.info("OAuth2AUthenticationFailureHandler - onAuthenticationFailure");
 
-
-
     }
 }

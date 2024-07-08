@@ -22,8 +22,7 @@ public class CookieUtils {
                     return cookie;
                 }
             }
-        }
-        return null;
+        } return null;
     }
 
     public <T> T getCookie(HttpServletRequest req, String name, Class<T> valueType){
@@ -51,6 +50,8 @@ public class CookieUtils {
     public void deleteCookie(HttpServletResponse res, String name){
         setCookie(res, name, null, 0);
     }
+
+
     public String serialize(Object obj){
         return Base64.getUrlEncoder().encodeToString(SerializationUtils.serialize(obj));
     }
